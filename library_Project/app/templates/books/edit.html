@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Book{% endblock %}
+
+{% block content %}
+<h2>Edit Book</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <p>{{ form.title.label }} {{ form.title() }}</p>
+    <p>{{ form.cover_photo.label }} {{ form.cover_photo() }}</p>
+    <p>{{ form.pages.label }} {{ form.pages() }}</p>
+    <p>{{ form.description.label }} {{ form.description() }}</p>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
